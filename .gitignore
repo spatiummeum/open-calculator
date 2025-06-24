@@ -1,0 +1,14 @@
+# Archivos y carpetas ignorados por git
+
+# Ignorar checklist de pruebas
+calculator/CHECKLIST.md
+
+# Ignorar dependencias y archivos temporales comunes
+node_modules/
+dist/
+build/
+.env
+*.log
+__pycache__/
+.DS_Store
+*.pyc

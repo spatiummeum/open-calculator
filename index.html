@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- =========================
+         METADATOS Y ESTILOS
+         ========================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de rebajes</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- =========================
+             HEADER PRINCIPAL
+             ========================= -->
+        <div class="card header-card">
+            <div class="header-content">
+                <div class="header-left">
+                    <!-- Logo de la empresa -->
+                    <img src="icons/nestle.svg" alt="Nestlé" class="nestle-logo">
+                    <div class="header-text">
+                        <h1 class="title">
+                            <!-- Icono de recibo -->
+                            <svg class="receipt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                            Calculadora de rebajes
+                        </h1>
+                        <p class="subtitle">Calcule descuentos con IVA incluido para facturas en pesos chilenos</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <!-- Logo Savory -->
+                    <img src="icons/savory.svg" alt="Savory" class="nestle-logo savory-logo">
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================
+             ALERTA DE ERROR
+             ========================= -->
+        <div class="alert alert-error" id="error-alert" style="display: none;">
+            <span id="error-message"></span>
+        </div>
+
+        <!-- =========================
+             MAIN: CONFIGURACIÓN Y PRODUCTOS
+             ========================= -->
+        <div class="main-grid">
+            <!-- Tarjeta de configuración de factura -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Datos de la factura</h2>
+                </div>
+                <div class="card-content">
+                    <div class="form-group">
+                        <label for="invoice-total">Monto original de la actura (CLP)</label>
+                        <input type="number" id="invoice-total" placeholder="Ej: 100000" min="0" step="1">
+                    </div>
+                    <div class="separator"></div>
+                    <div class="form-section">
+                        <h3>Agregar producto a descontar</h3>
+                        <!-- Formulario para agregar productos -->
+                        <div class="form-group">
+                            <label for="product-value">Valor del producto (CLP)</label>
+                            <input type="number" id="product-value" placeholder="Ej: 50000" min="0" step="1">
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="is-half">
+                            <label for="is-half">Aplicar solo para rebaje de unidades</label>
+                        </div>
+                        <button class="btn btn-primary btn-full" id="add-product-btn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Agregar producto
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta de lista de productos -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Productos a descontar</h2>
+                    <p class="card-description">Lista de productos que se descontarán de la factura</p>
+                </div>
+                <div class="card-content">
+                    <div id="products-list">
+                        <p class="empty-state">No hay productos agregados</p>
+                    </div>
+                    <button class="btn btn-outline btn-full" id="clear-all-btn" style="display: none; margin-top: 0.5rem;">Limpiar Todo</button>
+                    <button class="btn btn-primary btn-full" id="calculate-btn" style="display: none;">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                        Calcular Descuento Final
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================
+             RESULTADOS DEL CÁLCULO
+             ========================= -->
+        <div class="card" id="results-card" style="display: none;">
+            <div class="card-header">
+                <h2>
+                    <svg class="title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                    Resultados del Cálculo
+                </h2>
+            </div>
+            <div class="card-content">
+                <div class="results-grid">
+                    <div class="result-card result-original">
+                        <p class="result-label">Monto Original</p>
+                        <p class="result-value" id="result-original">$0</p>
+                    </div>
+                    <div class="result-card result-discount">
+                        <p class="result-label">Descuento Total (con IVA)</p>
+                        <p class="result-value" id="result-discount">-$0</p>
+                    </div>
+                    <div class="result-card result-total">
+                        <p class="result-label">Nuevo Total</p>
+                        <p class="result-value" id="result-total">$0</p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="breakdown">
+                    <h4>Desglose del Descuento:</h4>
+                    <div id="breakdown-list"></div>
+                </div>
+                <div class="note">
+                    <p><strong>Nota:</strong> El descuento se calcula tomando el valor base de cada producto (completo o mitad según se especifique) y agregándole el 19% de IVA. Este monto total se descuenta del valor original de la factura.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================
+             SECCIÓN ABOUT Y TECNOLOGÍAS
+             ========================= -->
+        <div class="about-section">
+            <h3>Calculadora de descuentos en factura</h3>
+            <p>Esta aplicación permite calcular descuentos en facturas con IVA incluido, diseñada específicamente para el equipo de Preventa, Nestlé Chile, con propositos educativos.</p>
+        </div>
+        <div class="about-section">
+            <h3>Características Principales</h3>
+            <ul>
+                <li>Cálculo automático de descuentos con IVA (19%)</li>
+                <li>Soporte para descuentos completos o parciales (unidades)</li>
+                <li>Formato de moneda Chilena (CLP)</li>
+            </ul>
+        </div>
+        <div class="about-section">
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="icons/github-black.svg" alt="GitHub" style="width:90px; height:90px; display:block; margin:auto;">
+                    <div class="tech-info"></div>
+                </div>
+                <div class="tech-item">
+                    <img src="icons/html.svg" alt="HTML5" style="width:90px; height:90px; display:block; margin:auto;">
+                    <div class="tech-info"></div>
+                </div>
+                <div class="tech-item">
+                    <img src="icons/icons8-javascript-500.svg" alt="JavaScript" style="width:90px; height:90px; display:block; margin:auto;">
+                    <div class="tech-info"></div>
+                </div>
+                <div class="tech-item">
+                    <img src="icons/vs-code.svg" alt="VS Code" style="width:90px; height:90px; display:block; margin:auto;">
+                    <div class="tech-info"></div>
+                </div>
+                <div class="tech-item">
+                    <img src="icons/css3-svgrepo-com.svg" alt="CSS3" style="width:90px; height:90px; display:block; margin:auto; filter: hue-rotate(180deg);">
+                    <div class="tech-info"></div>
+                </div>
+            </div>
+        </div>
+        <div class="about-section">
+            <h3>Repositorio</h3>
+            <div class="brand-info">
+                <a href="https://github.com/spatiummeum/calculator" target="_blank" rel="noopener">
+                    <img src="icons/github-mark.svg" alt="GitHub" class="brand-logo">
+                </a>
+                <p>Proyecto de código abierto, desarrollado por Erick Carrillo.</p>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         SCRIPT PRINCIPAL
+         ========================= -->
+    <script src="js/main.js"></script>
+</body>
+</html>
