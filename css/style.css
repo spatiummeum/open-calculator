@@ -743,8 +743,8 @@ input[type="checkbox"] {
     .header-content {
       flex-direction: column;
       align-items: center;
-      gap: 0.3rem;
-      padding: 0.15rem 0 0.15rem 0;
+      gap: 1rem;
+      padding: 1rem 0;
       min-height: unset;
     }
     .header-card .card-header {
@@ -760,7 +760,7 @@ input[type="checkbox"] {
     .header-left {
       flex-direction: column;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1rem;
       width: 100%;
     }
 
@@ -771,16 +771,16 @@ input[type="checkbox"] {
     }
 
     .savory-logo {
-      height: 6rem; /* Altura reducida para móvil */
+      height: 5rem;
       max-width: 100%;
       display: block;
       object-fit: contain;
-      margin: 0 0 0 auto; /* Alineado a la derecha */
+      margin: 0 auto; /* Centrado */
     }
 
     .header-right {
       width: 100%;
-      justify-content: flex-end; /* Alineado a la derecha */
+      justify-content: center; /* Centrado */
       margin-top: 0.5rem;
       align-items: center;
     }

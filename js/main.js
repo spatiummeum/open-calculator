@@ -17,14 +17,14 @@ const clearAllBtn = document.getElementById('clear-all-btn');
 // =========================
 // UTILIDAD: Formatear moneda CLP
 // =========================
-// Formatea un número como moneda chilena (pesos)
-// Ejemplo: 10000 -> "$10.000"
+// Formatea un número como moneda chilena (pesos) con 2 decimales
+// Ejemplo: 10000.50 -> "$10.000,50"
 const formatCurrency = (amount) => {
     return new Intl.NumberFormat('es-CL', { 
         style: 'currency', 
         currency: 'CLP',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
     }).format(amount);
 };
 
@@ -77,9 +77,9 @@ function renderProductsList() {
         
         const p = document.createElement('p');
         const strong = document.createElement('strong');
-        // Manejar valores decimales correctamente
+        // Usar valor float directamente
         const baseValue = product.isHalf ? product.value / 2 : product.value;
-        strong.textContent = formatCurrency(Math.round(baseValue * 100) / 100);
+        strong.textContent = formatCurrency(baseValue);
         
         p.appendChild(document.createTextNode('Producto con valor base de '));
         p.appendChild(strong);
@@ -203,24 +203,20 @@ calculateBtn.addEventListener('click', () => {
     let totalDiscountAmount = 0;
     const IVA_RATE = 0.19; // Tasa de IVA (19%)
 
-    // Cálculo de descuento para cada producto con manejo de decimales
+    // Cálculo de descuento manteniendo precisión float
     productsToDiscount.forEach(product => {
         // 1. Determinar valor base: completo o mitad (para unidades)
         let baseValueToDiscount = product.isHalf ? product.value / 2 : product.value;
         
-        // 2. Calcular valor con IVA: base * (1 + 0.19)
-        // Usar operaciones enteras para evitar problemas de punto flotante
-        let valueWithIva = Math.round(baseValueToDiscount * 100 * (1 + IVA_RATE)) / 100;
+        // 2. Calcular valor con IVA: base * (1 + IVA_RATE)
+        let valueWithIva = baseValueToDiscount * (1 + IVA_RATE);
         
-        // 3. Acumular al descuento total
+        // 3. Acumular al descuento total manteniendo float
         totalDiscountAmount += valueWithIva;
     });
 
-    // Redondear a 2 decimales para evitar errores de cálculo
-    totalDiscountAmount = Math.round(totalDiscountAmount * 100) / 100;
-    
-    // 4. Calcular el nuevo total
-    const newInvoiceTotal = Math.round((originalInvoiceTotal - totalDiscountAmount) * 100) / 100;
+    // 4. Calcular el nuevo total con float
+    const newInvoiceTotal = originalInvoiceTotal - totalDiscountAmount;
 
     // Mostramos los resultados
     document.getElementById('result-original').textContent = formatCurrency(originalInvoiceTotal);
