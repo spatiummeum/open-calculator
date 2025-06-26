@@ -1,4 +1,28 @@
 
+/* 
+  CALCULADORA DE REBAJES - Hoja de estilos
+  Versión: 1.1.0
+  Autor: Erick Carrillo
+  Repositorio: https://github.com/spatiummeum/calculator
+
+  Descripción:
+  Estilos para la aplicación de cálculo de descuentos con IVA incluido.
+  Incluye diseño responsivo, efectos glassmorphism y estilos para componentes.
+  Organizado en secciones lógicas para fácil mantenimiento.
+
+  Secciones:
+  1. Reset y variables globales
+  2. Layout general
+  3. Header y logos
+  4. Tarjetas (cards)
+  5. Botones
+  6. Formularios
+  7. Utilidades y otros componentes
+  8. Resultados y desgloses
+  9. Sección "Acerca de"
+  10. Media queries para responsividad
+*/
+
 /* =========================
    RESET Y BASE
    ========================= */
@@ -39,6 +63,7 @@ body {
   gap: 1.5rem;
   padding: 1.5rem 2rem 1.5rem 2rem;
   min-height: 8rem;
+  overflow: hidden;
 }
 .header-left {
   display: flex;
@@ -48,9 +73,10 @@ body {
 .header-right {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 0 0 auto; /* Evita que crezca */
+  padding-right: 1rem;
 }
 .header-text {
   margin: 0 1.5rem;
@@ -73,15 +99,18 @@ body {
   margin-bottom: 0.5rem;
 }
 .nestle-logo {
-  height: 6rem;
+  height: 5rem;
   width: auto;
   filter: brightness(0) invert(1);
   margin-left: 1rem;
   margin-right: 1rem;
 }
 .savory-logo {
-  height: 6rem;
+  height: 5rem; /* Reducido de 6rem a 5rem */
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 0.5rem; /* Margen reducido */
 }
 .receipt-icon,
 .title-icon {
@@ -100,6 +129,7 @@ body {
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  max-width: 100%;
 }
 .card-header {
   padding: 1.5rem;
@@ -267,7 +297,7 @@ input[type="checkbox"] {
 }
 
 /* =========================
-   UTILIDADES Y OTROS
+   UTILIDADES Y COMPONENTES
    ========================= */
 .main-grid {
   display: grid;
@@ -530,6 +560,9 @@ input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
+/* =========================
+   BOTONES (ESTILOS ESPECÍFICOS)
+   ========================= */
 /* Botones con efecto glass */
 .btn {
   display: inline-flex;
@@ -629,7 +662,9 @@ input[type="checkbox"] {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Formularios */
+/* =========================
+   FORMULARIOS (ESTILOS DETALLADOS)
+   ========================= */
 .form-group {
   margin-bottom: 1rem;
 }
@@ -691,7 +726,9 @@ input[type="checkbox"] {
   color: #e2e8f0;
 }
 
-/* Layout */
+/* =========================
+   LAYOUT RESPONSIVO
+   ========================= */
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -734,14 +771,16 @@ input[type="checkbox"] {
     }
 
     .savory-logo {
-      margin: 0 auto;
-      height: 6.5rem;
+      height: 6rem; /* Altura reducida para móvil */
+      max-width: 100%;
       display: block;
+      object-fit: contain;
+      margin: 0 0 0 auto; /* Alineado a la derecha */
     }
 
     .header-right {
       width: 100%;
-      justify-content: center;
+      justify-content: flex-end; /* Alineado a la derecha */
       margin-top: 0.5rem;
       align-items: center;
     }
@@ -896,7 +935,9 @@ input[type="checkbox"] {
   border: 1px solid rgba(245, 101, 101, 0.3);
 }
 
-/* Modal with Enhanced Glass Effect */
+/* =========================
+   MODALES (EFECTO GLASS MEJORADO)
+   ========================= */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -974,7 +1015,9 @@ input[type="checkbox"] {
   line-height: 1.5;
 }
 
-/* Technologies Grid with SVG Icons */
+/* =========================
+   SECCIÓN TECNOLOGÍAS (GRID CON ICONOS SVG)
+   ========================= */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

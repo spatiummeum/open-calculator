@@ -1,41 +1,29 @@
-<<<<<<< HEAD
-# Calculadora de descuentos y rebajes de productos, para las facturas del equipo de preventa, Savory helados, Nestlé Chile, en mi camino por esta empresa, en el año 2025.
+# Calculadora de Rebajes
 
+Aplicación web para calcular descuentos en facturas con IVA incluido, desarrollada para el equipo de Preventa de Savory Helados, Nestlé Chile, con fines educativos y de código abierto.
 
-Proyecto de código abierto.
-=======
-# Calculadora de Descuentos en Factura
+## 🚀 Demo
 
-![Logo](calculator/icons/github-mark.svg)
-
-Aplicación web para calcular descuentos en facturas con IVA incluido, desarrollada para el equipo de Preventa, Nestlé Chile, con fines educativos y de código abierto.
->>>>>>> 52a1629 (update styles)
+Puedes probar la calculadora en línea (agrega aquí el enlace de despliegue si usas GitHub Pages, Netlify, Vercel, etc).
 
 ## Características
 
 - Cálculo automático de descuentos con IVA (19%)
-- Soporte para descuentos completos o parciales (mitad)
+- Soporte para descuentos completos o parciales (unidades/mitad)
 - Formato de moneda chilena (CLP)
-- Interfaz responsive y accesible
+- Interfaz responsiva y moderna
+- Accesibilidad y usabilidad mejoradas
 - Desglose detallado de cálculos
-- Código abierto y fácil de modificar
+- Código documentado y organizado
 
 ## Tecnologías Utilizadas
 
 - HTML5
-- CSS3
-- JavaScript ES6+
+- CSS3 (con efectos glassmorphism y responsividad)
+- JavaScript (validación, lógica de cálculo y renderizado dinámico)
 - [Montserrat Font](https://fonts.google.com/specimen/Montserrat)
 - [VS Code](https://code.visualstudio.com/)
-<<<<<<< HEAD
-- [GitHub](https://github.com/)
-=======
 - [GitHub](https://github.com/spatiummeum/calculator)
->>>>>>> 52a1629 (update styles)
-
-## Vista previa
-
-![Captura de pantalla](calculator/images/screenshot.png)
 
 ## Instalación y uso
 
@@ -48,11 +36,7 @@ Aplicación web para calcular descuentos en facturas con IVA incluido, desarroll
 
 No se requieren dependencias ni instalación adicional.
 
-<<<<<<< HEAD
-## Estructura modular del proyecto
-=======
 ## Estructura del proyecto
->>>>>>> 52a1629 (update styles)
 
 ```
 calculator/
@@ -65,7 +49,21 @@ calculator/
 ├── images/
 ├── js/
 │   └── main.js
+├── README.md
+└── CHECKLIST.md
 ```
+
+## Pruebas Manuales
+
+Consulta el archivo `CHECKLIST.md` para una lista de pruebas manuales recomendadas antes del despliegue.
+
+## Despliegue
+
+Puedes desplegar este proyecto fácilmente en:
+- **GitHub Pages**
+- **Vercel**
+- **Netlify**
+- **Cloudflare Pages**
 
 ## Contribuciones
 
