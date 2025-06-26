@@ -12,3 +12,7 @@ build/
 __pycache__/
 .DS_Store
 *.pyc
+# ... (reglas existentes)
+
+# Log files
+*.log
