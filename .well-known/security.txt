@@ -1,0 +1,20 @@
+Contact: https://github.com/spatiummeum/open-calculator/issues
+Expires: 2026-07-15T23:59:59.000Z
+Encryption: https://github.com/spatiummeum.gpg
+Preferred-Languages: es, en
+Canonical: https://open-calculator.vercel.app/.well-known/security.txt
+Policy: https://github.com/spatiummeum/open-calculator/blob/main/README.md
+Hiring: https://github.com/spatiummeum
+
+# Calculadora de Rebajes - Nestlé Chile
+# Aplicación web para calcular descuentos en facturas con IVA incluido
+# Proyecto de código abierto desarrollado por Erick Carrillo
+# 
+# Para reportar vulnerabilidades de seguridad:
+# 1. Crear un issue en GitHub con etiqueta "security"
+# 2. Incluir descripción detallada del problema
+# 3. Proporcionar pasos para reproducir si es posible
+# 4. No divulgar públicamente hasta que se resuelva
+#
+# Alcance: Esta aplicación es un proyecto educativo y de código abierto
+# Se agradece la divulgación responsable de vulnerabilidades

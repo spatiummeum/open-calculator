@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+# Sitemap: https://open-calculator.vercel.app/sitemap.xml
+
+# Políticas de rastreo
+Crawl-delay: 1
+
+# Información del sitio
+# Calculadora de Rebajes - Nestlé Chile
+# Aplicación web para calcular descuentos en facturas con IVA incluido
+# Contacto: https://github.com/spatiummeum/open-calculator

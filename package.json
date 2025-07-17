@@ -1,0 +1,67 @@
+{
+  "name": "calculadora-rebajes",
+  "version": "1.0.0",
+  "description": "Calculadora de descuentos para facturas con IVA incluido - Nestlé Chile",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "serve": "python -m http.server 8000",
+    "serve:node": "npx http-server -p 8000",
+    "lint": "eslint js/ --fix",
+    "lint:check": "eslint js/"
+  },
+  "keywords": [
+    "calculator",
+    "discount",
+    "invoice",
+    "iva",
+    "chile",
+    "nestle",
+    "savory"
+  ],
+  "author": "Erick Carrillo",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "babel-jest": "^29.5.0",
+    "eslint": "^8.42.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.0",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": [
+      "standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": ["error", "always"],
+      "quotes": ["error", "single"],
+      "no-console": "warn",
+      "no-unused-vars": "error"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spatiummeum/open-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spatiummeum/open-calculator/issues"
+  },
+  "homepage": "https://open-calculator.vercel.app"
+}

@@ -1,0 +1,663 @@
+{
+  "ssl": {
+    "subject": {
+      "CN": "*.vercel.app"
+    },
+    "issuer": {
+      "C": "US",
+      "O": "Let's Encrypt",
+      "CN": "R11"
+    },
+    "subjectaltname": "DNS:*.vercel.app, DNS:vercel.app",
+    "infoAccess": {
+      "CA Issuers - URI": [
+        "http://r11.i.lencr.org/"
+      ]
+    },
+    "ca": false,
+    "modulus": "B8F5A86097D6A306BA51A89C33F830F3E461A44CEB8B0681EEC6CC3B9608E957758C3F0E6A9198F2EFDD1DFF4CC8779934F9F3DDE7CC1E4ABE118239F896EE6E1C04098B150FB13FE23A1C0250D82BA2982384AF422673525FCBC72A3F038682A6BE940A93D01E1EACCD642372373080A74468E3CC68D46A413B5C2F904FD358322BD0EBC2BEDF21958114C5FFA0B74EEB629067A1AA2B0D793795C6BC4748E553E10C4A1EE9AE71958D1D1AFD6453ED9871C7A6F47F92DBAF26E722931CA5877A639F545341E768679564278979B20314319273C9A3DDD3431DE22E011D40EF12DCB78962F6DF3DFD4CF1EE3CF90C51EB1B38E1AFC68561FDAF76849D671743",
+    "bits": 2048,
+    "exponent": "0x10001",
+    "pubkey": {
+      "type": "Buffer",
+      "data": [
+        48,
+        130,
+        1,
+        34,
+        48,
+        13,
+        6,
+        9,
+        42,
+        134,
+        72,
+        134,
+        247,
+        13,
+        1,
+        1,
+        1,
+        5,
+        0,
+        3,
+        130,
+        1,
+        15,
+        0,
+        48,
+        130,
+        1,
+        10,
+        2,
+        130,
+        1,
+        1,
+        0,
+        184,
+        245,
+        168,
+        96,
+        151,
+        214,
+        163,
+        6,
+        186,
+        81,
+        168,
+        156,
+        51,
+        248,
+        48,
+        243,
+        228,
+        97,
+        164,
+        76,
+        235,
+        139,
+        6,
+        129,
+        238,
+        198,
+        204,
+        59,
+        150,
+        8,
+        233,
+        87,
+        117,
+        140,
+        63,
+        14,
+        106,
+        145,
+        152,
+        242,
+        239,
+        221,
+        29,
+        255,
+        76,
+        200,
+        119,
+        153,
+        52,
+        249,
+        243,
+        221,
+        231,
+        204,
+        30,
+        74,
+        190,
+        17,
+        130,
+        57,
+        248,
+        150,
+        238,
+        110,
+        28,
+        4,
+        9,
+        139,
+        21,
+        15,
+        177,
+        63,
+        226,
+        58,
+        28,
+        2,
+        80,
+        216,
+        43,
+        162,
+        152,
+        35,
+        132,
+        175,
+        66,
+        38,
+        115,
+        82,
+        95,
+        203,
+        199,
+        42,
+        63,
+        3,
+        134,
+        130,
+        166,
+        190,
+        148,
+        10,
+        147,
+        208,
+        30,
+        30,
+        172,
+        205,
+        100,
+        35,
+        114,
+        55,
+        48,
+        128,
+        167,
+        68,
+        104,
+        227,
+        204,
+        104,
+        212,
+        106,
+        65,
+        59,
+        92,
+        47,
+        144,
+        79,
+        211,
+        88,
+        50,
+        43,
+        208,
+        235,
+        194,
+        190,
+        223,
+        33,
+        149,
+        129,
+        20,
+        197,
+        255,
+        160,
+        183,
+        78,
+        235,
+        98,
+        144,
+        103,
+        161,
+        170,
+        43,
+        13,
+        121,
+        55,
+        149,
+        198,
+        188,
+        71,
+        72,
+        229,
+        83,
+        225,
+        12,
+        74,
+        30,
+        233,
+        174,
+        113,
+        149,
+        141,
+        29,
+        26,
+        253,
+        100,
+        83,
+        237,
+        152,
+        113,
+        199,
+        166,
+        244,
+        127,
+        146,
+        219,
+        175,
+        38,
+        231,
+        34,
+        147,
+        28,
+        165,
+        135,
+        122,
+        99,
+        159,
+        84,
+        83,
+        65,
+        231,
+        104,
+        103,
+        149,
+        100,
+        39,
+        137,
+        121,
+        178,
+        3,
+        20,
+        49,
+        146,
+        115,
+        201,
+        163,
+        221,
+        211,
+        67,
+        29,
+        226,
+        46,
+        1,
+        29,
+        64,
+        239,
+        18,
+        220,
+        183,
+        137,
+        98,
+        246,
+        223,
+        61,
+        253,
+        76,
+        241,
+        238,
+        60,
+        249,
+        12,
+        81,
+        235,
+        27,
+        56,
+        225,
+        175,
+        198,
+        133,
+        97,
+        253,
+        175,
+        118,
+        132,
+        157,
+        103,
+        23,
+        67,
+        2,
+        3,
+        1,
+        0,
+        1
+      ]
+    },
+    "valid_from": "Jun 24 04:57:32 2025 GMT",
+    "valid_to": "Sep 22 04:57:31 2025 GMT",
+    "fingerprint": "81:D3:FA:22:93:E5:25:70:85:9A:59:F7:5D:92:C4:FE:CF:35:0D:C7",
+    "fingerprint256": "CF:7D:EA:B1:F6:D3:8D:F4:F7:DA:1F:83:F1:44:C8:1D:E2:58:46:A5:3A:AD:9E:5F:79:E0:C3:92:23:CE:2D:B7",
+    "fingerprint512": "4F:FA:C5:54:B7:E3:F2:AF:F0:15:B0:06:81:17:04:45:76:60:A1:EE:D3:09:D3:27:30:34:66:CE:80:7D:CF:EF:0D:63:51:97:0F:4C:F4:43:3B:60:26:57:EC:8A:48:0D:C5:BE:7E:FD:BA:C5:FC:A2:90:E1:99:E5:56:9D:93:44",
+    "ext_key_usage": [
+      "1.3.6.1.5.5.7.3.1",
+      "1.3.6.1.5.5.7.3.2"
+    ],
+    "serialNumber": "06E0911B48B03062893D1DC6E1613E5E3ACB"
+  },
+  "domain": {
+    "internicData": {
+      "error": "No matches found for domain in internic database"
+    },
+    "whoisData": null
+  },
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "540502",
+    "cache-control": "public, max-age=0, must-revalidate",
+    "content-disposition": "inline",
+    "content-length": "2717",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Tue, 15 Jul 2025 22:07:58 GMT",
+    "etag": "\"000ba71553191c1a0a0d814025d769d4\"",
+    "last-modified": "Wed, 09 Jul 2025 15:59:35 GMT",
+    "server": "Vercel",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "x-vercel-cache": "HIT",
+    "x-vercel-id": "iad1:lhr1::9sp4r-1752617278509-519db5e9328d"
+  },
+  "dns": {
+    "A": {
+      "address": "64.29.17.3",
+      "family": 4
+    },
+    "AAAA": [
+      "64.29.17.3",
+      "216.198.79.3"
+    ],
+    "MX": [],
+    "TXT": [],
+    "NS": [],
+    "CNAME": [],
+    "SOA": [],
+    "SRV": [],
+    "PTR": []
+  },
+  "http-security": {
+    "strictTransportPolicy": true,
+    "xFrameOptions": false,
+    "xContentTypeOptions": false,
+    "xXSSProtection": false,
+    "contentSecurityPolicy": false
+  },
+  "social-tags": {
+    "title": "Calculadora de rebajes",
+    "description": "Calculadora de descuentos para facturas con IVA incluido",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "author": "Erick Carrillo"
+  },
+  "security-txt": {
+    "isPresent": false
+  },
+  "firewall": {
+    "hasWaf": false
+  },
+  "dnssec": {
+    "DNSKEY": {
+      "isFound": false,
+      "answer": null,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "https://open-calculator.vercel.app/.",
+            "type": 48
+          }
+        ],
+        "Authority": [
+          {
+            "name": ".",
+            "type": 6,
+            "TTL": 86397,
+            "data": "a.root-servers.net. nstld.verisign-grs.com. 2025071502 1800 900 604800 86400"
+          }
+        ]
+      }
+    },
+    "DS": {
+      "isFound": false,
+      "answer": null,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "https://open-calculator.vercel.app/.",
+            "type": 43
+          }
+        ],
+        "Authority": [
+          {
+            "name": ".",
+            "type": 6,
+            "TTL": 86400,
+            "data": "a.root-servers.net. nstld.verisign-grs.com. 2025071502 1800 900 604800 86400"
+          }
+        ],
+        "Comment": "Response from 192.112.36.4."
+      }
+    },
+    "RRSIG": {
+      "isFound": false,
+      "answer": null,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": true,
+        "CD": false,
+        "Question": [
+          {
+            "name": "https://open-calculator.vercel.app/.",
+            "type": 46
+          }
+        ],
+        "Authority": [
+          {
+            "name": ".",
+            "type": 6,
+            "TTL": 86397,
+            "data": "a.root-servers.net. nstld.verisign-grs.com. 2025071502 1800 900 604800 86400"
+          }
+        ]
+      }
+    }
+  },
+  "hsts": {
+    "message": "Site is compatible with the HSTS preload list!",
+    "compatible": true,
+    "hstsHeader": "max-age=63072000; includeSubDomains; preload"
+  },
+  "tls-cipher-suites": {
+    "id": 63528503,
+    "timestamp": "2025-07-15T22:07:58.701374Z",
+    "target": "open-calculator.vercel.app",
+    "replay": -1,
+    "has_tls": true,
+    "cert_id": 189852598,
+    "trust_id": 344343575,
+    "is_valid": true,
+    "completion_perc": 50,
+    "connection_info": {
+      "scanIP": "",
+      "serverside": false,
+      "ciphersuite": null,
+      "curvesFallback": false
+    },
+    "ack": true,
+    "attempts": 1,
+    "analysis_params": {}
+  },
+  "tls-security-config": {
+    "id": 63528503,
+    "timestamp": "2025-07-15T22:07:58.701374Z",
+    "target": "open-calculator.vercel.app",
+    "replay": -1,
+    "has_tls": true,
+    "cert_id": 189852598,
+    "trust_id": 344343575,
+    "is_valid": true,
+    "completion_perc": 50,
+    "connection_info": {
+      "scanIP": "",
+      "serverside": false,
+      "ciphersuite": null,
+      "curvesFallback": false
+    },
+    "ack": true,
+    "attempts": 1,
+    "analysis_params": {}
+  },
+  "tls-client-support": {
+    "id": 63528503,
+    "timestamp": "2025-07-15T22:07:58.701374Z",
+    "target": "open-calculator.vercel.app",
+    "replay": -1,
+    "has_tls": true,
+    "cert_id": 189852598,
+    "trust_id": 344343575,
+    "is_valid": true,
+    "completion_perc": 50,
+    "connection_info": {
+      "scanIP": "",
+      "serverside": false,
+      "ciphersuite": null,
+      "curvesFallback": false
+    },
+    "ack": true,
+    "attempts": 1,
+    "analysis_params": {}
+  },
+  "redirects": {
+    "redirects": [
+      "https://open-calculator.vercel.app/"
+    ]
+  },
+  "linked-pages": {
+    "internal": [],
+    "external": [
+      "https://github.com/spatiummeum/open-calculator"
+    ]
+  },
+  "robots-txt": "{\"error\":\"Error fetching robots.txt: Request failed with status code 404\"}",
+  "status": {
+    "isUp": true,
+    "responseTime": 21.168708999990486,
+    "responseCode": 200
+  },
+  "block-lists": {
+    "blocklists": [
+      {
+        "server": "AdGuard",
+        "serverIp": "176.103.130.130",
+        "isBlocked": false
+      },
+      {
+        "server": "AdGuard Family",
+        "serverIp": "176.103.130.132",
+        "isBlocked": false
+      },
+      {
+        "server": "CleanBrowsing Adult",
+        "serverIp": "185.228.168.10",
+        "isBlocked": false
+      },
+      {
+        "server": "CleanBrowsing Family",
+        "serverIp": "185.228.168.168",
+        "isBlocked": false
+      },
+      {
+        "server": "CleanBrowsing Security",
+        "serverIp": "185.228.168.9",
+        "isBlocked": false
+      },
+      {
+        "server": "CloudFlare",
+        "serverIp": "1.1.1.1",
+        "isBlocked": false
+      },
+      {
+        "server": "CloudFlare Family",
+        "serverIp": "1.1.1.3",
+        "isBlocked": false
+      },
+      {
+        "server": "Comodo Secure",
+        "serverIp": "8.26.56.26",
+        "isBlocked": false
+      },
+      {
+        "server": "Google DNS",
+        "serverIp": "8.8.8.8",
+        "isBlocked": false
+      },
+      {
+        "server": "Neustar Family",
+        "serverIp": "156.154.70.3",
+        "isBlocked": false
+      },
+      {
+        "server": "Neustar Protection",
+        "serverIp": "156.154.70.2",
+        "isBlocked": false
+      },
+      {
+        "server": "Norton Family",
+        "serverIp": "199.85.126.20",
+        "isBlocked": false
+      },
+      {
+        "server": "OpenDNS",
+        "serverIp": "208.67.222.222",
+        "isBlocked": false
+      },
+      {
+        "server": "OpenDNS Family",
+        "serverIp": "208.67.222.123",
+        "isBlocked": false
+      },
+      {
+        "server": "Quad9",
+        "serverIp": "9.9.9.9",
+        "isBlocked": false
+      },
+      {
+        "server": "Yandex Family",
+        "serverIp": "77.88.8.7",
+        "isBlocked": false
+      },
+      {
+        "server": "Yandex Safe",
+        "serverIp": "77.88.8.88",
+        "isBlocked": false
+      }
+    ]
+  },
+  "carbon": {
+    "bytes": 10194,
+    "green": false,
+    "gco2e": 0.0010622822251170872,
+    "rating": "A+",
+    "statistics": {
+      "adjustedBytes": 7696.47,
+      "energy": 0.0000021503688767552374,
+      "co2": {
+        "grid": {
+          "grams": 0.0010622822251170872,
+          "litres": 0.0005908413736101238
+        },
+        "renewable": {
+          "grams": 0.0008675304838456214,
+          "litres": 0.0004825204551149345
+        }
+      }
+    },
+    "cleanerThan": 1,
+    "scanUrl": "https://open-calculator.vercel.app/"
+  }
+}
